@@ -1,0 +1,357 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Vazirmatn, sans-serif;
+}
+header {
+  background: center center url(./images/homechef-background.jpeg);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  max-height: 800px;
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+div.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+/* header svg#logo {
+} */
+header > div.header-content > h1 {
+  color: #fff;
+  font-size: 60px;
+  text-align: center;
+  text-shadow: 0px 0px 32px rgba(0, 0, 0, 0.5);
+}
+header > div.header-content > h1::selection {
+  background-color: #00860051;
+  color: rgba(0, 0, 0, 0.5);
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
+div.search-box {
+  width: 100%;
+  height: 48px;
+  position: relative;
+}
+div.search-box > svg {
+  width: 30px;
+  height: 100%;
+  position: absolute;
+  right: 10px;
+  pointer-events: none;
+  color: #767676;
+}
+div.search-box > input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 200px;
+  font-size: 18px;
+  padding: 0 45px 0 50px;
+}
+div.search-box > input:focus {
+  outline: 3px solid #4969f5;
+}
+div.search-box > div.btn-search {
+  position: absolute;
+  left: 3px;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+div.search-box button {
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background-color: #008600;
+  cursor: pointer;
+}
+div.search-box button:hover {
+  background-color: #006800;
+}
+div.search-box > div.btn-search > button > svg {
+  color: #fff;
+}
+header > img {
+  position: absolute;
+  pointer-events: none;
+}
+img#food1 {
+  width: 25vw;
+  left: -15vw;
+  top: -12vw;
+}
+img#food2 {
+  width: 20vw;
+  left: 15vw;
+  top: 2vw;
+}
+img#food3 {
+  width: 20vw;
+  right: 20vw;
+  top: -6vw;
+}
+img#food4 {
+  width: 30vw;
+  right: -7vw;
+  top: -8vw;
+}
+img#food5 {
+  width: 25vw;
+  left: -3vw;
+  bottom: -1vw;
+}
+img#food6 {
+  width: 15vw;
+  right: -9vw;
+  bottom: 0vw;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  img#food1 {
+    display: none;
+  }
+  img#food2 {
+    width: 40vw;
+    left: 2vw;
+    top: 2vw;
+  }
+  img#food3 {
+    display: none;
+  }
+  img#food4 {
+    width: 50vw;
+    right: -12vw;
+    top: -12vw;
+  }
+  img#food5 {
+    width: 45vw;
+    left: -5vw;
+    bottom: -2vw;
+  }
+  img#food6 {
+    width: 35vw;
+    right: -21vw;
+    bottom: -0vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  img#food1 {
+    display: none;
+  }
+  img#food2 {
+    width: 50vw;
+    left: 2vw;
+    top: 2vw;
+  }
+  img#food3 {
+    display: none;
+  }
+  img#food4 {
+    width: 60vw;
+    right: -14vw;
+    top: -15vw;
+  }
+  img#food5 {
+    width: 55vw;
+    left: -6vw;
+    bottom: -2vw;
+  }
+  img#food6 {
+    width: 45vw;
+    right: -27vw;
+    bottom: -0vw;
+  }
+  header > div.header-content > h1 {
+    margin: 10px 0;
+  }
+}
+main {
+  width: 100%;
+  height: fit-content;
+}
+main > div.main-content {
+  background-color: #008600;
+  padding-bottom: 48px;
+}
+main > div.main-content > p {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+  padding: 64px 0 48px 0;
+}
+main > div.main-content ul {
+  margin: 0;
+  padding: 0 0 0px 0;
+  width: 98%;
+  margin: 0 auto;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+main > div.main-content li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  transition: all 500ms;
+}
+main > div.main-content img {
+  width: 100%;
+  border-radius: 10px;
+}
+main > div.main-content a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  color: transparent;
+  font-size: 30px;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: all 500ms;
+}
+main > div.main-content a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+main > div.main-content li:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  main > div.main-content ul {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  main > div.main-content li:hover {
+    transform: scale(1.05);
+  }
+}
+@media screen and (max-width: 767px) {
+  main > div.main-content ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
+  main > div.main-content li:hover {
+    transform: scale(1.025);
+  }
+}
+main > div.restaurant-img {
+  background-color: #008600;
+  display: flex;
+  justify-content: center;
+}
+main > div.restaurant-img > img {
+  width: 70%;
+  border-radius: 10px;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  main > div.restaurant-img > img {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 767px) {
+  main > div.restaurant-img > img {
+    width: 90%;
+  }
+}
+footer {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: flex-end;
+  background-color: #008600;
+}
+footer > div.footer-content {
+  background-color: #08313a;
+  width: 100%;
+  height: 460px;
+  border-radius: 50% 50% 0 0;
+  display: flex;
+  flex-direction: column;
+}
+footer > div.footer-content > div.logo-icon {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #fff;
+}
+footer main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.social-media {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+div.social-media svg {
+  width: 50px;
+}
+div.social-media svg path {
+  fill: #fff;
+}
+footer div.line {
+  width: 1px;
+  height: 80%;
+  background-color: #fff;
+}
+footer div.developers-profile {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+}
+a#instagram:hover > svg path {
+  fill: #dd0d80;
+}
+a#telegram:hover > svg path {
+  fill: #33a8db;
+}
+a#twitter:hover > svg path {
+  fill: #179cf0;
+}
+@media screen and (max-width: 767px) {
+  div.social-media {
+    flex-direction: column;
+  }
+  div.social-media {
+    width: 30%;
+  }
+  footer div.developers-profile {
+    width: 70%;
+  }
+}
